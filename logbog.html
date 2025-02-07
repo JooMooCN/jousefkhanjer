@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logbog - Jousef Khanjer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/JooMooLogo2.png" alt="V5 Logo" class="logo">
+    </header>
+
+    <h1 class="portfolio-title">Jousef Khanjer - Portfølje</h1>
+
+    <nav>
+        <a href="index.html" class="tab-btn">Om mig</a>
+        <a href="logbog.html" class="tab-btn active">Logbog</a>
+        <a href="laeringsplan.html" class="tab-btn">Læringsplan</a>
+        <a href="litteraturliste.html" class="tab-btn">Litteraturliste</a>
+    </nav>
+
+    <main>
+        <section id="logbog" class="tab-content active">
+            <img src="images/header-image.jpg" alt="Logbog header" class="header-image">
+            <div class="logbog-container">
+                <div class="logbog-section">
+                    <h2>App udvikling</h2>
+                    <div class="sprint-container" id="app-sprints"></div>
+                </div>
+                <div class="logbog-divider"></div>
+                <div class="logbog-section">
+                    <h2>Spiludvikling i Unity</h2>
+                    <div class="sprint-container" id="unity-sprints"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-content"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
