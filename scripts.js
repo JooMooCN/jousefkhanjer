@@ -81,11 +81,8 @@ function createSprintBox(sprint, container) {
   container.appendChild(box)
 }
 
-// Generate sprint boxes if on the logbog page
-if (appSprints && unitySprints) {
-  sprintData.app.forEach((sprint) => createSprintBox(sprint, appSprints))
-  sprintData.unity.forEach((sprint) => createSprintBox(sprint, unitySprints))
-}
+sprintData.app.forEach((sprint) => createSprintBox(sprint, appSprints))
+sprintData.unity.forEach((sprint) => createSprintBox(sprint, unitySprints))
 
 // Modal functionality
 function showModal(sprint) {
@@ -94,17 +91,15 @@ function showModal(sprint) {
   modal.style.display = "flex"
 }
 
-if (closeModal) {
-  closeModal.addEventListener("click", () => {
-    modal.style.display = "none"
-  })
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none"
+})
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none"
-    }
-  })
-}
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none"
+  }
+})
 
 // Contact form handling
 const contactForm = document.querySelector(".contact-form")
@@ -121,15 +116,5 @@ document.querySelector('[data-tab="kontakt"]').addEventListener("click", (e) => 
   // Switch to Om mig tab and scroll to contact form
   document.querySelector('[data-tab="om-mig"]').click()
   document.getElementById("kontakt-sektion").scrollIntoView({ behavior: "smooth" })
-})
-
-// Active nav link
-const currentPage = window.location.pathname.split("/").pop()
-const navLinks = document.querySelectorAll("nav a")
-
-navLinks.forEach((link) => {
-  if (link.getAttribute("href") === currentPage) {
-    link.classList.add("active")
-  }
 })
 
