@@ -176,17 +176,19 @@ nav a.active {
   }
   
   .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    text-align: center; /* Centrerer ikonerne */
+  }
+  
+  .social-icons a {
+    display: inline-block; /* Gør links (og dermed billeder) inline */
+    margin: 0 10px; /* Lidt afstand mellem ikonerne */
   }
   
   .social-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-  }
+    width: 40px; /* Justér størrelse efter behov */
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(7434%) hue-rotate(359deg) brightness(100%) contrast(120%);
+  }  
   
   .social-icons img:hover {
     transform: scale(1.1);
