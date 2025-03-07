@@ -279,6 +279,13 @@ nav a.active {
   line-height: 1.6;
 }
 
+.logbog-image {
+  width: 400px; /* Justér bredden */
+  height: auto; /* Bevar proportionerne */
+  display: block; /* Sørger for, at det ikke overlapper andet */
+  margin: 20px auto; /* Centrerer billedet */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .logbog-container {
