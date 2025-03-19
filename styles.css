@@ -300,3 +300,33 @@ nav a.active {
       margin-top: 2rem;
   }
 }
+
+.content-section {
+  background-color: var(--nav-hover);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.content-section h3, .content-section h4 {
+  color: var(--primary-color);
+}
+
+.resource-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.resource-list li {
+  margin-bottom: 1rem;
+}
+
+.resource-list li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.resource-list li a:hover {
+  color: var(--text-color);
+}
