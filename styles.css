@@ -330,3 +330,29 @@ nav a.active {
 .resource-list li a:hover {
   color: var(--text-color);
 }
+
+.resource-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    background-color: var(--nav-hover);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.resource-item img {
+    width: 120px;
+    height: auto;
+    margin-right: 1rem;
+    border-radius: 8px;
+}
+
+.resource-content {
+    flex: 1;
+}
+
+.reference-number {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
