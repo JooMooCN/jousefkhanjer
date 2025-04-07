@@ -49,6 +49,73 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const detailsElements = document.querySelectorAll('details');
+
+  detailsElements.forEach((details) => {
+    details.addEventListener('toggle', function () {
+      if (details.open) {
+        detailsElements.forEach((otherDetails) => {
+          if (otherDetails !== details) {
+            otherDetails.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const resourceItems = document.querySelectorAll('.resource-item');
+
+    resourceItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateY(-5px)';
+            item.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.3)';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translateY(0)';
+            item.style.boxShadow = 'none';
+        });
+    });
+});
+
+const images = [
+  "images/logbog-images/app-uge9-10-screenshot.png",
+  "images/logbog-images/spil-uge10-11-screenshot.png",
+  "images/logbog-images/app-uge9-10-screenshot.png",
+  "images/logbog-images/spil-uge10-11-screenshot.png"
+];
+let currentImageIndex = 0;
+
+function openModal(index) {
+  currentImageIndex = index;
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  modalImage.src = images[currentImageIndex];
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  const modal = document.getElementById("imageModal");
+  modal.style.display = "none";
+}
+
+function changeImage(direction) {
+  currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+  const modalImage = document.getElementById("modalImage");
+  modalImage.src = images[currentImageIndex];
+}
+
+// Close modal when clicking outside the image
+document.addEventListener("click", (event) => {
+  const modal = document.getElementById("imageModal");
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
 
 
 
