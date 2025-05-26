@@ -89,11 +89,10 @@ const images = [
 ];
 let currentImageIndex = 0;
 
-function openModal(index) {
-  currentImageIndex = index;
+function openModal(imgElement) {
   const modal = document.getElementById("imageModal");
   const modalImage = document.getElementById("modalImage");
-  modalImage.src = images[currentImageIndex];
+  modalImage.src = imgElement.src;
   modal.style.display = "block";
 }
 
